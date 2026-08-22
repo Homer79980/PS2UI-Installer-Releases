@@ -6,7 +6,7 @@
 
 当前版本：`0.1.1`
 
-- [下载 PS2UI-Engine-Installer-0.1.1.exe](./PS2UI-Engine-Installer-0.1.1.exe)
+- [下载 PS2UI-Engine-Installer-0.1.1.exe](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.1/PS2UI-Engine-Installer-0.1.1.exe)
 - [SHA-256 校验文件](./PS2UI-Engine-Installer-0.1.1-SHA256.txt)
 
 校验文件内容应为：
