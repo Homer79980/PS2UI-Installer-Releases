@@ -56,7 +56,7 @@ Unreal  <项目>/Plugins/Ps2Unreal
 
 ## 安装后如何使用
 
-所有引擎都使用同一套流程：先安装 Photoshop 端 PS2UI，导出 Package，再在对应引擎中导入这个 Package。Photoshop 插件不包含在本安装器内，请从 [PS2UI Releases](https://github.com/Homer79980/PS2UI-Releases/releases/latest) 单独下载 `PS2UI-Photoshop-<版本>.ccx`。
+所有引擎都使用同一套流程：先安装 Photoshop 端 PS2UI，导出 Package，再在对应引擎中导入这个 Package。Photoshop 插件不包含在本安装器内，请从 [PS2UI Releases](https://github.com/Homer79980/PS2UI/releases/latest) 单独下载 `PS2UI-Photoshop-<版本>.ccx`。
 
 ### Unity
 

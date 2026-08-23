@@ -25,7 +25,7 @@
 3. 关闭目标编辑器，选择项目并安装。
 4. 安装完成后按页面提示，在对应编辑器中启用插件并导入 PS2UI 导出包。
 
-Photoshop 导出插件不包含在本 EXE 中，请从 [PS2UI Releases](https://github.com/Homer79980/PS2UI-Releases/releases/latest) 单独安装 PS2UI CCX。
+Photoshop 导出插件不包含在本 EXE 中，请从 [PS2UI Releases](https://github.com/Homer79980/PS2UI/releases/latest) 单独安装 PS2UI CCX。
 
 ## 已知边界
 
