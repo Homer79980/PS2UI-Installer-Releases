@@ -1,6 +1,6 @@
 # PS2UI 引擎插件安装器
 
-这是 PS2UI 多引擎插件的 Windows 离线安装器。双击一个 EXE，即可为项目安装 Unity、Godot、Cocos Creator 和 Unreal Engine 插件。发布仓库只包含安装成品和使用说明；安装器源码位于私有的 `PS2UI-Source` 仓库。
+这是 PS2UI 多引擎插件的 Windows 离线安装器。双击一个 EXE，即可为项目安装 Unity、Godot、Cocos Creator 和 Unreal Engine 插件。
 
 ## 下载与版本
 
@@ -12,7 +12,7 @@
 校验文件内容应为：
 
 ```text
-65DC99C15F38897AD9E6F29C1FD54AAF13213CFA1FC559C50489CDAA2134D454  PS2UI-Engine-Installer-0.1.1.exe
+D4DEF2DD3B972DB6DF2A0541CE931B0713332A41848FDD95A07CB125A59962E7  PS2UI-Engine-Installer-0.1.1.exe
 ```
 
 PowerShell 校验命令：
@@ -30,7 +30,7 @@ Get-FileHash .\PS2UI-Engine-Installer-0.1.1.exe -Algorithm SHA256
 | Cocos Creator | Ps2Cocos `0.1.1` | Creator `3.8.5` 至 `3.8.8` |
 | Unreal Engine | Ps2Unreal `0.1.1` | Epic Launcher UE `5.7`、`5.8` Win64 |
 
-安装器目前只支持 Windows 10/11 x64，使用普通用户权限运行。它不支持 macOS、Linux、Windows ARM、Unreal 源码编译版或表格之外的引擎版本。
+安装器目前只支持 Windows 10/11 x64，使用普通用户权限运行。它不支持 macOS、Linux、Windows ARM、自定义 Unreal 构建或表格之外的引擎版本。
 
 ## 安装方法
 
@@ -115,7 +115,7 @@ Unreal  <项目>/Plugins/Ps2Unreal
 - 安装使用临时目录和原子替换；失败时恢复旧插件。
 - 只写入上述插件目录，不触碰 `Assets`、`Content`、导入生成目录或业务资源。
 - 编辑器运行时文件可能被锁定；请先关闭编辑器再安装、修复或更新。
-- Unreal 二进制包只保证 Epic Launcher 的 UE 5.7/5.8 Win64。源码编译版、自定义 Build ID 或其它平台需要对应的源码/二进制包。
+- Unreal 安装包只保证 Epic Launcher 的 UE 5.7/5.8 Win64。自定义 Build ID 和其它平台不在当前版本支持范围内。
 - 当前测试版未签名，SmartScreen 可能提示未知发布者。发布包的真实性以 GitHub Release、SHA-256 和后续代码签名为准。
 
 ## 截图

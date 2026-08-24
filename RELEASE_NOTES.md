@@ -29,6 +29,6 @@ Photoshop 导出插件不包含在本 EXE 中，请从 [PS2UI Releases](https://
 
 ## 已知边界
 
-当前 EXE 未进行 Authenticode 签名，Windows SmartScreen 可能显示未知发布者。请以本 Release 的 SHA-256 为准。Unreal 只保证 Epic Launcher 的 5.7/5.8 Win64，源码编译版和其它平台不在本版支持范围内。
+当前 EXE 未进行 Authenticode 签名，Windows SmartScreen 可能显示未知发布者。请以本 Release 的 SHA-256 为准。Unreal 只保证 Epic Launcher 的 5.7/5.8 Win64，自定义构建和其它平台不在本版支持范围内。
 
 完整安装、使用、字体、资源复用、九宫、卸载和故障排查说明见仓库 [README.md](./README.md)。
