@@ -4,28 +4,28 @@
 
 ## 下载与版本
 
-当前版本：`0.1.1`
+当前版本：`0.1.2`
 
-- [下载 PS2UI-Engine-Installer-0.1.1.exe](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.1/PS2UI-Engine-Installer-0.1.1.exe)
-- [SHA-256 校验文件](./PS2UI-Engine-Installer-0.1.1-SHA256.txt)
+- [下载 PS2UI-Engine-Installer-0.1.2.exe](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.2/PS2UI-Engine-Installer-0.1.2.exe)
+- [SHA-256 校验文件](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.2/PS2UI-Engine-Installer-0.1.2-SHA256.txt)
 
 校验文件内容应为：
 
 ```text
-21EE6704A0D46BC944F28D64601F2D00539C448CAD8651EDC2D33837B41C4984  PS2UI-Engine-Installer-0.1.1.exe
+2B8D673F6AD108CB893A134A3E00F8850FE118E9E3578A06EB9B345847878901  PS2UI-Engine-Installer-0.1.2.exe
 ```
 
 PowerShell 校验命令：
 
 ```powershell
-Get-FileHash .\PS2UI-Engine-Installer-0.1.1.exe -Algorithm SHA256
+Get-FileHash .\PS2UI-Engine-Installer-0.1.2.exe -Algorithm SHA256
 ```
 
 ## 支持范围
 
 | 引擎 | 安装器内置插件 | 已验证版本 |
 |---|---:|---|
-| Unity | Ps2Unity `2.1.1` | Unity `2022.3` |
+| Unity | Ps2Unity `3.0.0` | Unity `2022.3` |
 | Godot | Ps2Godot `0.1.1` | Godot `4.6.2` |
 | Cocos Creator | Ps2Cocos `0.1.1` | Creator `3.8.5` 至 `3.8.8` |
 | Unreal Engine | Ps2Unreal `0.1.1` | Epic Launcher UE `5.7`、`5.8` Win64 |
@@ -36,7 +36,7 @@ Get-FileHash .\PS2UI-Engine-Installer-0.1.1.exe -Algorithm SHA256
 
 1. 关闭准备安装插件的 Unity、Godot、Cocos Creator 或 Unreal Editor。安装器不会强制结束编辑器进程。
 2. 下载 EXE 和 SHA-256 文件，先完成哈希校验。
-3. 双击 `PS2UI-Engine-Installer-0.1.1.exe`。如果 Windows SmartScreen 显示“未知发布者”，请先核对 SHA-256；当前测试版尚未进行 Authenticode 签名。
+3. 双击 `PS2UI-Engine-Installer-0.1.2.exe`。如果 Windows SmartScreen 显示“未知发布者”，请先核对 SHA-256；当前测试版尚未进行 Authenticode 签名。
 4. 选择“自动识别项目”，或手动勾选一个或多个引擎，并分别选择对应的项目根目录。
 5. 点击“检查所选项目”，确认项目类型、引擎版本、已安装插件版本和冲突提示。
 6. 点击“安装所选引擎”。多个引擎会逐个处理，一个项目失败不会回滚其他已成功项目。
@@ -61,7 +61,7 @@ Unreal  <项目>/Plugins/Ps2Unreal
 ### Unity
 
 1. 打开项目并等待 Unity 完成脚本编译。
-2. 在菜单中打开 `Tools -> PSD2Unity -> 打开工作台`。
+2. 在菜单中打开 `Tools -> PS2Unity -> 打开工作台`。
 3. 选择包含 `layout.json` 和 `sprites` 的 PS2UI 导出包根目录，不要选择 `sprites` 本身。
 4. 导入完成后，在项目窗口查看生成的 UI 资源和场景。
 5. 九宫资源使用 Unity UI 的 `Image Type = Sliced`，修改 `RectTransform` 的宽高，不要用 Scale 拉伸。
