@@ -4,31 +4,32 @@
 
 ## 下载与版本
 
-当前版本：`0.1.2`
+当前版本：`0.1.3`
 
-- [下载 PS2UI-Engine-Installer-0.1.2.exe](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.2/PS2UI-Engine-Installer-0.1.2.exe)
-- [SHA-256 校验文件](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.2/PS2UI-Engine-Installer-0.1.2-SHA256.txt)
+- [下载 PS2UI-Engine-Installer-0.1.3.exe](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.3/PS2UI-Engine-Installer-0.1.3.exe)
+- [SHA-256 校验文件](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.3/PS2UI-Engine-Installer-0.1.3-SHA256.txt)
 
 校验文件内容应为：
 
 ```text
-2B8D673F6AD108CB893A134A3E00F8850FE118E9E3578A06EB9B345847878901  PS2UI-Engine-Installer-0.1.2.exe
+5F5DBB4BE31A13EE83715BBD207FA6DCB3DC7B7D73552CE9FE02AC7D66F1AF79  PS2UI-Engine-Installer-0.1.3.exe
 ```
 
 PowerShell 校验命令：
 
 ```powershell
-Get-FileHash .\PS2UI-Engine-Installer-0.1.2.exe -Algorithm SHA256
+Get-FileHash .\PS2UI-Engine-Installer-0.1.3.exe -Algorithm SHA256
 ```
 
 ## 支持范围
 
 | 引擎 | 安装器内置插件 | 已验证版本 |
 |---|---:|---|
-| Unity | Ps2Unity `3.0.0` | Unity `2022.3` |
-| Godot | Ps2Godot `0.1.1` | Godot `4.6.2` |
-| Cocos Creator | Ps2Cocos `0.1.1` | Creator `3.8.5` 至 `3.8.8` |
-| Unreal Engine | Ps2Unreal `0.1.1` | Epic Launcher UE `5.7`、`5.8` Win64 |
+| Unity | Ps2Unity `3.2.5` | Unity `2022.3` |
+| Godot | Ps2Godot `0.1.2` | Godot `4.6.2` |
+| Cocos Creator | Ps2Cocos `0.1.2` | Creator `3.8.5` 至 `3.8.8` |
+| Unreal Engine 5.8 | Ps2Unreal `0.1.2` | Epic Launcher UE `5.8` Win64 |
+| Unreal Engine 5.7 | Ps2Unreal `0.1.1` 原兼容包 | 本批次沿用原正式包，未重新编译 |
 
 安装器目前只支持 Windows 10/11 x64，使用普通用户权限运行。它不支持 macOS、Linux、Windows ARM、自定义 Unreal 构建或表格之外的引擎版本。
 
@@ -36,10 +37,10 @@ Get-FileHash .\PS2UI-Engine-Installer-0.1.2.exe -Algorithm SHA256
 
 1. 关闭准备安装插件的 Unity、Godot、Cocos Creator 或 Unreal Editor。安装器不会强制结束编辑器进程。
 2. 下载 EXE 和 SHA-256 文件，先完成哈希校验。
-3. 双击 `PS2UI-Engine-Installer-0.1.2.exe`。如果 Windows SmartScreen 显示“未知发布者”，请先核对 SHA-256；当前测试版尚未进行 Authenticode 签名。
+3. 双击 `PS2UI-Engine-Installer-0.1.3.exe`。如果 Windows SmartScreen 显示“未知发布者”，请先核对 SHA-256；当前版本尚未进行 Authenticode 签名。
 4. 选择“自动识别项目”，或手动勾选一个或多个引擎，并分别选择对应的项目根目录。
 5. 点击“检查所选项目”，确认项目类型、引擎版本、已安装插件版本和冲突提示。
-6. 点击“安装所选引擎”。多个引擎会逐个处理，一个项目失败不会回滚其他已成功项目。
+6. 点击“安装 / 更新所选引擎”。多个引擎会逐个处理，一个项目失败不会回滚其他已成功项目。
 7. 安装完成页会按引擎显示启用方式、导入菜单、生成目录和九宫操作提示。
 8. 点击“知道了，退出安装器”，再打开对应编辑器完成启用。
 
@@ -102,7 +103,7 @@ Unreal  <项目>/Plugins/Ps2Unreal
 
 ## 已安装、更新、修复与卸载
 
-- 再次检查已安装项目时，安装器会显示“已经安装、未做修改”，不会把它报告成新的安装失败。
+- 安装器管理的旧版本会先备份再升级；同版本与更高版本不自动重写。外部安装和旧源码仍会提示先处理冲突。
 - “修复”只恢复安装器之前管理的插件目录。
 - 安装器会把被替换的插件备份到 `%LOCALAPPDATA%\PS2UI\EngineInstaller\Backups`。
 - “卸载”只处理带 `.ps2ui-install.json` 安装回执的目录，不会删除用户手动安装或自行维护的同名插件。
@@ -116,7 +117,7 @@ Unreal  <项目>/Plugins/Ps2Unreal
 - 只写入上述插件目录，不触碰 `Assets`、`Content`、导入生成目录或业务资源。
 - 编辑器运行时文件可能被锁定；请先关闭编辑器再安装、修复或更新。
 - Unreal 安装包只保证 Epic Launcher 的 UE 5.7/5.8 Win64。自定义 Build ID 和其它平台不在当前版本支持范围内。
-- 当前测试版未签名，SmartScreen 可能提示未知发布者。发布包的真实性以 GitHub Release、SHA-256 和后续代码签名为准。
+- 当前版本未签名，SmartScreen 可能提示未知发布者。发布包的真实性以 GitHub Release、SHA-256 和后续代码签名为准。
 
 ## 截图
 
