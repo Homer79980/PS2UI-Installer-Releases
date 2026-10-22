@@ -4,28 +4,30 @@
 
 ## 下载与版本
 
-当前版本：`0.1.3`
+当前版本：`0.1.4`
 
-- [下载 PS2UI-Engine-Installer-0.1.3.exe](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.3/PS2UI-Engine-Installer-0.1.3.exe)
-- [SHA-256 校验文件](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.3/PS2UI-Engine-Installer-0.1.3-SHA256.txt)
+- [下载 PS2UI-Engine-Installer-0.1.4.exe](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.4/PS2UI-Engine-Installer-0.1.4.exe)
+- [SHA-256 校验文件](https://github.com/Homer79980/PS2UI-Installer-Releases/releases/download/v0.1.4/PS2UI-Engine-Installer-0.1.4-SHA256.txt)
 
 校验文件内容应为：
 
 ```text
-5F5DBB4BE31A13EE83715BBD207FA6DCB3DC7B7D73552CE9FE02AC7D66F1AF79  PS2UI-Engine-Installer-0.1.3.exe
+B8807C7886A3D14D518782B4730821E9490C45D08BD6091B7C79584E5E684806  PS2UI-Engine-Installer-0.1.4.exe
 ```
 
 PowerShell 校验命令：
 
 ```powershell
-Get-FileHash .\PS2UI-Engine-Installer-0.1.3.exe -Algorithm SHA256
+Get-FileHash .\PS2UI-Engine-Installer-0.1.4.exe -Algorithm SHA256
 ```
+
+**本次内置 Unity 3.2.6。文字定位修复还需要单独安装 PS2UI 2.1.21，并重新导出原 PSD/PSB；旧导出包不会自动重算定位框。**
 
 ## 支持范围
 
 | 引擎 | 安装器内置插件 | 已验证版本 |
 |---|---:|---|
-| Unity | Ps2Unity `3.2.5` | Unity `2022.3` |
+| Unity | Ps2Unity `3.2.6` | Unity `2022.3` |
 | Godot | Ps2Godot `0.1.2` | Godot `4.6.2` |
 | Cocos Creator | Ps2Cocos `0.1.2` | Creator `3.8.5` 至 `3.8.8` |
 | Unreal Engine 5.8 | Ps2Unreal `0.1.2` | Epic Launcher UE `5.8` Win64 |
@@ -37,7 +39,7 @@ Get-FileHash .\PS2UI-Engine-Installer-0.1.3.exe -Algorithm SHA256
 
 1. 关闭准备安装插件的 Unity、Godot、Cocos Creator 或 Unreal Editor。安装器不会强制结束编辑器进程。
 2. 下载 EXE 和 SHA-256 文件，先完成哈希校验。
-3. 双击 `PS2UI-Engine-Installer-0.1.3.exe`。如果 Windows SmartScreen 显示“未知发布者”，请先核对 SHA-256；当前版本尚未进行 Authenticode 签名。
+3. 双击 `PS2UI-Engine-Installer-0.1.4.exe`。如果 Windows SmartScreen 显示“未知发布者”，请先核对 SHA-256；当前版本尚未进行 Authenticode 签名。
 4. 选择“自动识别项目”，或手动勾选一个或多个引擎，并分别选择对应的项目根目录。
 5. 点击“检查所选项目”，确认项目类型、引擎版本、已安装插件版本和冲突提示。
 6. 点击“安装 / 更新所选引擎”。多个引擎会逐个处理，一个项目失败不会回滚其他已成功项目。
